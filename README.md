@@ -8,6 +8,35 @@ run w/ nodemon:
 
 - ```localhost:3000```
 
+___
+
+## Docker
+
+Description from https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
+
+### How to run w/ docker
+- ```docker build -t tc1852/node-web-app .```
+
+### How to see docker images
+- ```docker images```
+
+### How to run image
+```docker run -p 3001:3000 -d tc1852/node-web-app```
+
+### How to stop container
+```docker stop <container_id>
+
+### How to print output:
+Get container Id
+```docker ps```
+```docker logs <container id>
+
+### How to go inside the container:
+```docker exec -it <container id> /bin/bash
+
+### How to upload image on docker hub
+docker login && docker push tc1852/node-web-app
+___
 
 ## How to set up a secondary ssh
 1. Create a new ssh key:

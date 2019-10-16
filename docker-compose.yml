@@ -1,0 +1,29 @@
+version: '3'
+services:
+  prototype1:
+    container_name: prototype1
+    restart: always
+    build: .
+    volumes:
+      - ./:/var/www/prototype1
+    ports:
+      - '4300:4300'
+      - '4301:4301'
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - REDIS_URL=redis://cache
+    links:
+      - redis
+      - mongo
+    command:
+      sh -c 'npm i && node server'
+  mongo:
+    container_name: tony-mongo
+    image: 'mongo:4'
+  redis:
+    container_name: cache
+    image: 'redis:5'
+    expose:
+      - '6379'

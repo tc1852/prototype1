@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tc1852/prototype1#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "redis": "^2.8.0"
   }
 }
