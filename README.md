@@ -15,13 +15,13 @@ ___
 Description from https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
 
 ### How to run w/ docker
-- ```docker build -t tc1852/node-web-app .```
+- ```docker build -t tc1852/prototype .```
 
 ### How to see docker images
 - ```docker images```
 
 ### How to run image
-```docker run -p 3001:3000 -d tc1852/node-web-app```
+```docker run -p 3001:3000 -d tc1852/prototype```
 
 ### How to stop container
 ```docker stop <container_id>```
@@ -43,6 +43,16 @@ TTL key1
 flushall
 SETEX foo 40 "I said, Hello World!"
 SET foo "Hello World"
+```
+
+### How to push a new image to my repo:
+```
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+```
+- How to push it after the first time:
+```
+docker push tc1852/prototype:tagname
 ```
 
 ### How to upload image on docker hub

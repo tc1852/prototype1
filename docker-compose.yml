@@ -1,14 +1,14 @@
 version: '3'
 services:
   prototype1:
-    container_name: prototype1
+    container_name: tony-prototype
     restart: always
     build: .
     volumes:
       - ./:/var/www/prototype1
     ports:
-      - '4300:4300'
-      - '4301:4301'
+      # - '4300:4300'
+      # - '4301:4301'
       - '3000:3000'
     environment:
       - NODE_ENV=development
